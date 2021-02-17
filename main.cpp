@@ -76,8 +76,14 @@ void printResult(uint32_t val)
 int main() 
 {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    uint32_t n;
+    int32_t n;
     cin >> n;
-    printResult(n);
+    if (n <= 0)
+    {
+        cout << "A number should be positive" << endl;
+        return 0;
+    }
+    uint32_t val = static_cast<uint32_t>(n);
+    printResult(val);
     return 0;
 }
